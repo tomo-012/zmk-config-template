@@ -38,7 +38,7 @@ jobs:
 
       - name: Initialize ZMK Workspace
         run: |
-          west init -m https://github.com/zmkfirmware/zmk --mr main workspace
+          west init -m https://github.com --mr main --mf app/west.yml workspace
           cd workspace
           west update
           west export
