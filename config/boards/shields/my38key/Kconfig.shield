@@ -1,5 +1,0 @@
-config SHIELD_MY38KEY_LEFT
-    def_bool $(shields_list_contains,my38key_left)
-
-config SHIELD_MY38KEY_RIGHT
-    def_bool $(shields_list_contains,my38key_right)
