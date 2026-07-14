@@ -1,5 +1,0 @@
-include:
-  - board: seeeduino_xiao_ble
-    shield: my38key_left
-  - board: seeeduino_xiao_ble
-    shield: my38key_right
