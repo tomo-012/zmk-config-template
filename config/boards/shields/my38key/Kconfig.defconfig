@@ -1,6 +1,0 @@
-if SHIELD_MY38KEY_LEFT || SHIELD_MY38KEY_RIGHT
-
-config ZMK_KEYBOARD_NAME
-    default "my38key"
-
-endif
