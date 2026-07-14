@@ -39,7 +39,7 @@ jobs:
       - name: West Update
         run: west update
       - name: West Build (${{ matrix.shield }})
-        run: west build -s zmk/app -b ${{ matrix.board }} -- -DSHIELD=${{ matrix.shield }} -DZMK_CONFIG="$GITHUB_WORKSPACE/config"
+        run: west build -s app -b ${{ matrix.board }} -- -DSHIELD=${{ matrix.shield }} -DZMK_CONFIG="$GITHUB_WORKSPACE/config"
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 ${{ matrix.shield }}-${{ matrix.board }}.uf2
       - name: Archive (${{ matrix.shield }})
