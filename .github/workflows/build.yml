@@ -38,18 +38,18 @@ jobs:
 
       - name: Initialize ZMK Workspace
         run: |
-          west init -m https://github.com --mr main --mf app/west.yml workspace
-          cd workspace
+          west init -m https://github.com --mr main --mf app/west.yml zmk_workspace
+          cd zmk_workspace
           west update
           west export
 
       - name: West Build (${{ matrix.shield }})
         run: |
-          cd workspace
+          cd zmk_workspace
           west build -s zmk/app -b ${{ matrix.board }} -- -DSHIELD=${{ matrix.shield }} -DZMK_CONFIG="$GITHUB_WORKSPACE/config"
 
       - name: Rename zmk.uf2
-        run: cp workspace/build/zephyr/zmk.uf2 ${{ matrix.shield }}-${{ matrix.board }}.uf2
+        run: cp zmk_workspace/build/zephyr/zmk.uf2 ${{ matrix.shield }}-${{ matrix.board }}.uf2
 
       - name: Archive (${{ matrix.shield }})
         uses: actions/upload-artifact@v4
