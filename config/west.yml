@@ -1,9 +1,8 @@
 manifest:
-  remotes:
-    - name: zmkfirmware
-      url-base: https://github.com
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3.0
+      url: https://github.com
+      revision: main
       import: app/west.yml
+  self:
+    path: config
