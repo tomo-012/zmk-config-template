@@ -1,0 +1,6 @@
+# Don't delete this file! It's used by the GitHub Actions workflow to build the firmware.
+include:
+  - board: seeeduino_xiao_ble
+    shield: my38key_left
+  - board: seeeduino_xiao_ble
+    shield: my38key_right
